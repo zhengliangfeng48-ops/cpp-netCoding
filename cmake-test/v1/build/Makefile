@@ -129,125 +129,125 @@ app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-add.o: add.cpp.o
-.PHONY : add.o
+src/add.o: src/add.cpp.o
+.PHONY : src/add.o
 
 # target to build an object file
-add.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/add.cpp.o
-.PHONY : add.cpp.o
+src/add.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/add.cpp.o
+.PHONY : src/add.cpp.o
 
-add.i: add.cpp.i
-.PHONY : add.i
+src/add.i: src/add.cpp.i
+.PHONY : src/add.i
 
 # target to preprocess a source file
-add.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/add.cpp.i
-.PHONY : add.cpp.i
+src/add.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/add.cpp.i
+.PHONY : src/add.cpp.i
 
-add.s: add.cpp.s
-.PHONY : add.s
+src/add.s: src/add.cpp.s
+.PHONY : src/add.s
 
 # target to generate assembly for a file
-add.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/add.cpp.s
-.PHONY : add.cpp.s
+src/add.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/add.cpp.s
+.PHONY : src/add.cpp.s
 
-div.o: div.cpp.o
-.PHONY : div.o
+src/div.o: src/div.cpp.o
+.PHONY : src/div.o
 
 # target to build an object file
-div.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/div.cpp.o
-.PHONY : div.cpp.o
+src/div.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/div.cpp.o
+.PHONY : src/div.cpp.o
 
-div.i: div.cpp.i
-.PHONY : div.i
+src/div.i: src/div.cpp.i
+.PHONY : src/div.i
 
 # target to preprocess a source file
-div.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/div.cpp.i
-.PHONY : div.cpp.i
+src/div.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/div.cpp.i
+.PHONY : src/div.cpp.i
 
-div.s: div.cpp.s
-.PHONY : div.s
+src/div.s: src/div.cpp.s
+.PHONY : src/div.s
 
 # target to generate assembly for a file
-div.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/div.cpp.s
-.PHONY : div.cpp.s
+src/div.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/div.cpp.s
+.PHONY : src/div.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-mult.o: mult.cpp.o
-.PHONY : mult.o
+src/mult.o: src/mult.cpp.o
+.PHONY : src/mult.o
 
 # target to build an object file
-mult.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/mult.cpp.o
-.PHONY : mult.cpp.o
+src/mult.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/mult.cpp.o
+.PHONY : src/mult.cpp.o
 
-mult.i: mult.cpp.i
-.PHONY : mult.i
+src/mult.i: src/mult.cpp.i
+.PHONY : src/mult.i
 
 # target to preprocess a source file
-mult.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/mult.cpp.i
-.PHONY : mult.cpp.i
+src/mult.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/mult.cpp.i
+.PHONY : src/mult.cpp.i
 
-mult.s: mult.cpp.s
-.PHONY : mult.s
+src/mult.s: src/mult.cpp.s
+.PHONY : src/mult.s
 
 # target to generate assembly for a file
-mult.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/mult.cpp.s
-.PHONY : mult.cpp.s
+src/mult.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/mult.cpp.s
+.PHONY : src/mult.cpp.s
 
-sub.o: sub.cpp.o
-.PHONY : sub.o
+src/sub.o: src/sub.cpp.o
+.PHONY : src/sub.o
 
 # target to build an object file
-sub.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/sub.cpp.o
-.PHONY : sub.cpp.o
+src/sub.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/sub.cpp.o
+.PHONY : src/sub.cpp.o
 
-sub.i: sub.cpp.i
-.PHONY : sub.i
+src/sub.i: src/sub.cpp.i
+.PHONY : src/sub.i
 
 # target to preprocess a source file
-sub.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/sub.cpp.i
-.PHONY : sub.cpp.i
+src/sub.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/sub.cpp.i
+.PHONY : src/sub.cpp.i
 
-sub.s: sub.cpp.s
-.PHONY : sub.s
+src/sub.s: src/sub.cpp.s
+.PHONY : src/sub.s
 
 # target to generate assembly for a file
-sub.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/sub.cpp.s
-.PHONY : sub.cpp.s
+src/sub.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/src/sub.cpp.s
+.PHONY : src/sub.cpp.s
 
 # Help Target
 help:
@@ -258,21 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... app"
-	@echo "... add.o"
-	@echo "... add.i"
-	@echo "... add.s"
-	@echo "... div.o"
-	@echo "... div.i"
-	@echo "... div.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mult.o"
-	@echo "... mult.i"
-	@echo "... mult.s"
-	@echo "... sub.o"
-	@echo "... sub.i"
-	@echo "... sub.s"
+	@echo "... src/add.o"
+	@echo "... src/add.i"
+	@echo "... src/add.s"
+	@echo "... src/div.o"
+	@echo "... src/div.i"
+	@echo "... src/div.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mult.o"
+	@echo "... src/mult.i"
+	@echo "... src/mult.s"
+	@echo "... src/sub.o"
+	@echo "... src/sub.i"
+	@echo "... src/sub.s"
 .PHONY : help
 
 

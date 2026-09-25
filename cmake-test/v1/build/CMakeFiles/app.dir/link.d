@@ -1,12 +1,12 @@
-app: \
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
-  CMakeFiles/app.dir/add.cpp.o \
-  CMakeFiles/app.dir/sub.cpp.o \
-  CMakeFiles/app.dir/mult.cpp.o \
-  CMakeFiles/app.dir/div.cpp.o \
-  CMakeFiles/app.dir/main.cpp.o \
+  CMakeFiles/app.dir/src/add.cpp.o \
+  CMakeFiles/app.dir/src/div.cpp.o \
+  CMakeFiles/app.dir/src/main.cpp.o \
+  CMakeFiles/app.dir/src/mult.cpp.o \
+  CMakeFiles/app.dir/src/sub.cpp.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -41,15 +41,15 @@ app: \
 
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
-CMakeFiles/app.dir/add.cpp.o:
+CMakeFiles/app.dir/src/add.cpp.o:
 
-CMakeFiles/app.dir/sub.cpp.o:
+CMakeFiles/app.dir/src/div.cpp.o:
 
-CMakeFiles/app.dir/mult.cpp.o:
+CMakeFiles/app.dir/src/main.cpp.o:
 
-CMakeFiles/app.dir/div.cpp.o:
+CMakeFiles/app.dir/src/mult.cpp.o:
 
-CMakeFiles/app.dir/main.cpp.o:
+CMakeFiles/app.dir/src/sub.cpp.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 

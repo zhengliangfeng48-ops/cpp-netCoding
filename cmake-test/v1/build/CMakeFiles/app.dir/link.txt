@@ -1,1 +1,1 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/app.dir/link.d CMakeFiles/app.dir/add.cpp.o CMakeFiles/app.dir/sub.cpp.o CMakeFiles/app.dir/mult.cpp.o CMakeFiles/app.dir/div.cpp.o CMakeFiles/app.dir/main.cpp.o -o app
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/app.dir/link.d CMakeFiles/app.dir/src/add.cpp.o CMakeFiles/app.dir/src/div.cpp.o CMakeFiles/app.dir/src/main.cpp.o CMakeFiles/app.dir/src/mult.cpp.o CMakeFiles/app.dir/src/sub.cpp.o -o /home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app

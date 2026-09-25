@@ -72,100 +72,100 @@ include CMakeFiles/app.dir/flags.make
 CMakeFiles/app.dir/codegen:
 .PHONY : CMakeFiles/app.dir/codegen
 
-CMakeFiles/app.dir/add.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/add.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/add.cpp
-CMakeFiles/app.dir/add.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/add.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/add.cpp.o -MF CMakeFiles/app.dir/add.cpp.o.d -o CMakeFiles/app.dir/add.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/add.cpp
+CMakeFiles/app.dir/src/add.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/add.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/add.cpp
+CMakeFiles/app.dir/src/add.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/app.dir/src/add.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/add.cpp.o -MF CMakeFiles/app.dir/src/add.cpp.o.d -o CMakeFiles/app.dir/src/add.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/add.cpp
 
-CMakeFiles/app.dir/add.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/add.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/add.cpp > CMakeFiles/app.dir/add.cpp.i
+CMakeFiles/app.dir/src/add.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/add.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/add.cpp > CMakeFiles/app.dir/src/add.cpp.i
 
-CMakeFiles/app.dir/add.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/add.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/add.cpp -o CMakeFiles/app.dir/add.cpp.s
+CMakeFiles/app.dir/src/add.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/add.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/add.cpp -o CMakeFiles/app.dir/src/add.cpp.s
 
-CMakeFiles/app.dir/sub.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/sub.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/sub.cpp
-CMakeFiles/app.dir/sub.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/sub.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/sub.cpp.o -MF CMakeFiles/app.dir/sub.cpp.o.d -o CMakeFiles/app.dir/sub.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/sub.cpp
+CMakeFiles/app.dir/src/div.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/div.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/div.cpp
+CMakeFiles/app.dir/src/div.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/app.dir/src/div.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/div.cpp.o -MF CMakeFiles/app.dir/src/div.cpp.o.d -o CMakeFiles/app.dir/src/div.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/div.cpp
 
-CMakeFiles/app.dir/sub.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/sub.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/sub.cpp > CMakeFiles/app.dir/sub.cpp.i
+CMakeFiles/app.dir/src/div.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/div.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/div.cpp > CMakeFiles/app.dir/src/div.cpp.i
 
-CMakeFiles/app.dir/sub.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/sub.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/sub.cpp -o CMakeFiles/app.dir/sub.cpp.s
+CMakeFiles/app.dir/src/div.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/div.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/div.cpp -o CMakeFiles/app.dir/src/div.cpp.s
 
-CMakeFiles/app.dir/mult.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/mult.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/mult.cpp
-CMakeFiles/app.dir/mult.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/mult.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/mult.cpp.o -MF CMakeFiles/app.dir/mult.cpp.o.d -o CMakeFiles/app.dir/mult.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/mult.cpp
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/main.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/main.cpp
+CMakeFiles/app.dir/src/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/app.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/main.cpp.o -MF CMakeFiles/app.dir/src/main.cpp.o.d -o CMakeFiles/app.dir/src/main.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/main.cpp
 
-CMakeFiles/app.dir/mult.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/mult.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/mult.cpp > CMakeFiles/app.dir/mult.cpp.i
+CMakeFiles/app.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/main.cpp > CMakeFiles/app.dir/src/main.cpp.i
 
-CMakeFiles/app.dir/mult.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/mult.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/mult.cpp -o CMakeFiles/app.dir/mult.cpp.s
+CMakeFiles/app.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/main.cpp -o CMakeFiles/app.dir/src/main.cpp.s
 
-CMakeFiles/app.dir/div.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/div.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/div.cpp
-CMakeFiles/app.dir/div.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/div.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/div.cpp.o -MF CMakeFiles/app.dir/div.cpp.o.d -o CMakeFiles/app.dir/div.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/div.cpp
+CMakeFiles/app.dir/src/mult.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/mult.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/mult.cpp
+CMakeFiles/app.dir/src/mult.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/app.dir/src/mult.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/mult.cpp.o -MF CMakeFiles/app.dir/src/mult.cpp.o.d -o CMakeFiles/app.dir/src/mult.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/mult.cpp
 
-CMakeFiles/app.dir/div.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/div.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/div.cpp > CMakeFiles/app.dir/div.cpp.i
+CMakeFiles/app.dir/src/mult.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/mult.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/mult.cpp > CMakeFiles/app.dir/src/mult.cpp.i
 
-CMakeFiles/app.dir/div.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/div.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/div.cpp -o CMakeFiles/app.dir/div.cpp.s
+CMakeFiles/app.dir/src/mult.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/mult.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/mult.cpp -o CMakeFiles/app.dir/src/mult.cpp.s
 
-CMakeFiles/app.dir/main.cpp.o: CMakeFiles/app.dir/flags.make
-CMakeFiles/app.dir/main.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/main.cpp
-CMakeFiles/app.dir/main.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/main.cpp.o -MF CMakeFiles/app.dir/main.cpp.o.d -o CMakeFiles/app.dir/main.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/main.cpp
+CMakeFiles/app.dir/src/sub.cpp.o: CMakeFiles/app.dir/flags.make
+CMakeFiles/app.dir/src/sub.cpp.o: /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/sub.cpp
+CMakeFiles/app.dir/src/sub.cpp.o: CMakeFiles/app.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/app.dir/src/sub.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/app.dir/src/sub.cpp.o -MF CMakeFiles/app.dir/src/sub.cpp.o.d -o CMakeFiles/app.dir/src/sub.cpp.o -c /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/sub.cpp
 
-CMakeFiles/app.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/main.cpp > CMakeFiles/app.dir/main.cpp.i
+CMakeFiles/app.dir/src/sub.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/app.dir/src/sub.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/sub.cpp > CMakeFiles/app.dir/src/sub.cpp.i
 
-CMakeFiles/app.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/main.cpp -o CMakeFiles/app.dir/main.cpp.s
+CMakeFiles/app.dir/src/sub.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/app.dir/src/sub.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/sub.cpp -o CMakeFiles/app.dir/src/sub.cpp.s
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/add.cpp.o" \
-"CMakeFiles/app.dir/sub.cpp.o" \
-"CMakeFiles/app.dir/mult.cpp.o" \
-"CMakeFiles/app.dir/div.cpp.o" \
-"CMakeFiles/app.dir/main.cpp.o"
+"CMakeFiles/app.dir/src/add.cpp.o" \
+"CMakeFiles/app.dir/src/div.cpp.o" \
+"CMakeFiles/app.dir/src/main.cpp.o" \
+"CMakeFiles/app.dir/src/mult.cpp.o" \
+"CMakeFiles/app.dir/src/sub.cpp.o"
 
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app: CMakeFiles/app.dir/add.cpp.o
-app: CMakeFiles/app.dir/sub.cpp.o
-app: CMakeFiles/app.dir/mult.cpp.o
-app: CMakeFiles/app.dir/div.cpp.o
-app: CMakeFiles/app.dir/main.cpp.o
-app: CMakeFiles/app.dir/build.make
-app: CMakeFiles/app.dir/compiler_depend.ts
-app: CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable app"
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/src/add.cpp.o
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/src/div.cpp.o
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/src/main.cpp.o
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/src/mult.cpp.o
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/src/sub.cpp.o
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/build.make
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/compiler_depend.ts
+/home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app: CMakeFiles/app.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable /home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/app.dir/build: app
+CMakeFiles/app.dir/build: /home/zlf/coding/cpp-netCoding/cmake-test/aa/bb/cc/app
 .PHONY : CMakeFiles/app.dir/build
 
 CMakeFiles/app.dir/clean:

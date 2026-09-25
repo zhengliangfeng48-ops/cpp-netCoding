@@ -4,5 +4,6 @@
 const char* libVersion="Liberary Version 1.0";
 
 int add(int a,int b){
-	return a+b;
+	auto number=8;
+	return a+b+number;
 }

@@ -1,5 +1,5 @@
-CMakeFiles/app.dir/add.cpp.o: \
- /home/zlf/coding/cpp-netCoding/cmake-test/v1/add.cpp \
+CMakeFiles/app.dir/src/sub.cpp.o: \
+ /home/zlf/coding/cpp-netCoding/cmake-test/v1/src/sub.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -24,4 +24,4 @@ CMakeFiles/app.dir/add.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /home/zlf/coding/cpp-netCoding/cmake-test/v1/head.h
+ /home/zlf/coding/cpp-netCoding/cmake-test/v1/include/head.h
