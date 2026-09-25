@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -shared -Wl,--dependency-file=CMakeFiles/calc.dir/link.d -Wl,-soname,libcalc.so -o /home/zlf/coding/cpp-netCoding/cmake-test/abcdefg/libcalc.so CMakeFiles/calc.dir/src/add.cpp.o CMakeFiles/calc.dir/src/div.cpp.o CMakeFiles/calc.dir/src/mult.cpp.o CMakeFiles/calc.dir/src/sub.cpp.o
