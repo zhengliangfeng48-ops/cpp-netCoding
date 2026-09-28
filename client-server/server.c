@@ -26,14 +26,20 @@ int main(){
 	struct sockaddr_in *clientAddr=malloc(sizeof(struct sockaddr_in));
 
 	while(1){
-		int acceptFd=accept(socketFd,(struct sockaddr*)clientAddr,sizeof(*clientAddr));
+		int addrLen=sizeof(*clientAddr);
+		int acceptFd=accept(socketFd,(struct sockaddr*)clientAddr,&addrLen);
 
-		char inputStr[1024];
+		char inputStr[1024]="";
 		read(acceptFd,&inputStr,1024);
 
-		char outputStr[1024];
-		for(int i=0;i<sizeof(outputStr);++i)
-			outputStr[i]=inputStr[i]+('A'-'a');
+		char outputStr[1024]="";
+		for(int i=0;i<sizeof(inputStr)&&inputStr[i]!='\0';++i){
+			if(inputStr[i]>='a'&&inputStr[i]<='z'){
+				outputStr[i]=inputStr[i]+('A'-'a');
+			}else{
+				outputStr[i]=inputStr[i];
+			}
+		}
 
 		printf("Read: %s, transform to: %s \n",inputStr,outputStr);
 

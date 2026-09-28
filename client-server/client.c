@@ -22,10 +22,10 @@ int main(int argc,char* argv[]){
 	connect(socketFd,serverAddr,sizeof(*serverAddr));
 
 	char* inputStr=argv[1];
-	write(socketFd,inputStr,sizeof(inputStr));
+	write(socketFd,inputStr,1024);
 
-	char *outputStr;
-	read(socketFd,outputStr,sizeof(inputStr));
+	char outputStr[1024];
+	read(socketFd,&outputStr,1024);
 
 	printf("%s --> %s\n",inputStr,outputStr);
 
