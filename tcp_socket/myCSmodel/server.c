@@ -23,29 +23,27 @@ int main(){
 
 	struct sockaddr_in *clientAddr=malloc(sizeof(struct sockaddr_in));
 
+	int addrLen=sizeof(*clientAddr);
+	int acceptFd=accept(socketFd,(struct sockaddr*)clientAddr,(socklen_t*)&addrLen);
+
 	while(1){
-		int addrLen=sizeof(*clientAddr);
-		int acceptFd=accept(socketFd,(struct sockaddr*)clientAddr,(socklen_t*)&addrLen);
+		char inputStr[1024]="";
+		read(acceptFd,&inputStr,1024);
 
-		while(1){
-			char inputStr[1024]="";
-			read(acceptFd,&inputStr,1024);
-
-			char outputStr[1024]="";
-			for(int i=0;i<sizeof(inputStr)&&inputStr[i]!='\0';++i){
-				if(inputStr[i]>='a'&&inputStr[i]<='z'){
-					outputStr[i]=inputStr[i]+('A'-'a');
-				}else{
-					outputStr[i]=inputStr[i];
-				}
+		char outputStr[1024]="";
+		for(int i=0;i<sizeof(inputStr)&&inputStr[i]!='\0';++i){
+			if(inputStr[i]>='a'&&inputStr[i]<='z'){
+				outputStr[i]=inputStr[i]+('A'-'a');
+			}else{
+				outputStr[i]=inputStr[i];
 			}
-
-			printf(" Read: %s Transform to: %s \n",inputStr,outputStr);
-
-			write(acceptFd,&outputStr,1024);
 		}
-		close(acceptFd);
+
+		printf(" Read: %s Transform to: %s \n",inputStr,outputStr);
+
+		write(acceptFd,&outputStr,1024);
 	}
 
+	close(acceptFd);
 	close(socketFd);
 }
