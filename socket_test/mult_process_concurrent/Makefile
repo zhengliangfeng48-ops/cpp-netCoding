@@ -4,7 +4,7 @@ target=$(patsubst %.c,%,$(src))
 ALL:$(target)
 
 %:%.c
-	gcc $< -Wall -o $@ -g
+	gcc $< wrap.c -Wall -o $@ -g
 
 clean:
 	-rm -rf $(target)
