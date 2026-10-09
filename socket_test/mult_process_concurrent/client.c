@@ -1,6 +1,6 @@
 #include "wrap.h"
 
-#define SERV_PORT 9527
+#define SERV_PORT 9999
 
 int main(){
 	int cfd=socket(AF_INET,SOCK_STREAM,0);
@@ -14,9 +14,13 @@ int main(){
 
 	int ret=Connect(cfd,(struct sockaddr*)&serv_addr,sizeof(serv_addr));
 
-	int counter=10;
-	while(--counter){
-		write(cfd,"hello\n",6);
+	while(true){
+		char inputStr[BUFSIZ];
+		scanf("%s",inputStr);
+		int len;
+		for(len=0;inputStr[len]!=0;++len);
+		inputStr[len++]='\n';
+		write(cfd,inputStr,len);
 
 		char buf[BUFSIZ];
 		ret=read(cfd,buf,sizeof(buf));
