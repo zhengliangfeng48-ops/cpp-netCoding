@@ -19,6 +19,9 @@ int main(){
 	srv_addr.sin_port=htons(SRV_PORT);
 	srv_addr.sin_addr.s_addr=htonl(INADDR_ANY);
 
+	int opt=1;
+	setsockopt(lfd,SOL_SOCKET,SO_REUSEADDR,(void*)&opt,sizeof(opt));
+
 	Bind(lfd,(struct sockaddr*)&srv_addr,sizeof(srv_addr));
 
 	Listen(lfd,128);
