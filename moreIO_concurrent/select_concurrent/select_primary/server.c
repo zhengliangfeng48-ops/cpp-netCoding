@@ -6,8 +6,8 @@
 int main(){
 	int i,j,n,nready;
 	int maxfd=0;
-	int listenfd,connfd,sockfd;
-	char buf[BUFSIZ],str[INET_ADDRSTRLEN];
+	int listenfd,connfd;
+	char buf[BUFSIZ];
 
 	struct sockaddr_in clie_addr,serv_addr;
 	socklen_t clie_addr_len;
@@ -29,11 +29,6 @@ int main(){
 	fd_set rset,allset;			//定义读集合、备份集合
 	maxfd=listenfd;
 
-	int client[FD_SETSIZE];
-	int maxi=-1;
-	for(i=0;i<FD_SETSIZE;++i)
-		client[i]=-1;
-
 	FD_ZERO(&allset);			//清空监听集合
 	FD_SET(listenfd,&allset);
 
@@ -47,52 +42,27 @@ int main(){
 			clie_addr_len=sizeof(clie_addr);
 			connfd=Accept(listenfd,(struct sockaddr*)&clie_addr,&clie_addr_len);	//已经有连接请求，不会阻塞了
 
-			printf("received from %s at PORT %d\n",
-				inet_ntop(AF_INET,&clie_addr.sin_addr,str,sizeof(str)),
-				ntohs(clie_addr.sin_port));
-
-			for(i=0;i<FD_SETSIZE;++i){
-				if(client[i]<0){
-					client[i]=connfd;
-					break;
-				}
-			}
-			if(i==FD_SETSIZE){
-				fputs("too many clients\n",stderr);
-				exit(1);
-			}
-
 			FD_SET(connfd,&allset);
 
 			if(connfd>maxfd)
 				maxfd=connfd;
-			if(i>maxi)
-				maxi=i;
 
-			if(--nready==0)		//只有listenfd
+			if(nready==1)		//只有listenfd
 				continue;
 		}
 
-		for(i=0;i<=maxi;++i){
-			if((sockfd=client[i])<0)
-				continue;
-
-			if(FD_ISSET(sockfd,&rset)){
-				if((n=Read(sockfd,buf,sizeof(buf)))==0){		//客户端关闭连接
-					close(sockfd);
-					FD_CLR(sockfd,&allset);
-					client[i]=-1;
+		for(i=listenfd+1;i<=maxfd;++i){
+			if(FD_ISSET(i,&rset)){
+				if((n=Read(i,buf,sizeof(buf)))==0){		//客户端关闭连接
+					close(i);
+					FD_CLR(i,&allset);
 				}else if(n>0){
 					for(j=0;j<n;++j)
 						buf[j]=toupper(buf[j]);
 
-					Write(sockfd,buf,n);
-					Write(STDOUT_FILENO,buf,n);
+					Write(i,buf,n);
 				}
-				if(--nready==0)
-					break;
 			}
 		}
 	}
-	close(listenfd);
 }
