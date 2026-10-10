@@ -26,10 +26,10 @@ int main(){
 	Bind(listenfd,(struct sockaddr*)&serv_addr,sizeof(serv_addr));
 	Listen(listenfd,128);
 
-	fd_set rset,allset;
+	fd_set rset,allset;			//定义读集合、备份集合
 	maxfd=listenfd;
 
-	FD_ZERO(&allset);
+	FD_ZERO(&allset);			//清空监听集合
 	FD_SET(listenfd,&allset);
 
 	while(true){
@@ -38,22 +38,22 @@ int main(){
 		if(nready<0)
 			perr_exit("select error");
 
-		if(FD_ISSET(listenfd,&rset)){
+		if(FD_ISSET(listenfd,&rset)){	//listen满足监听的读事件
 			clie_addr_len=sizeof(clie_addr);
-			connfd=Accept(listenfd,(struct sockaddr*)&clie_addr,&clie_addr_len);
+			connfd=Accept(listenfd,(struct sockaddr*)&clie_addr,&clie_addr_len);	//已经有连接请求，不会阻塞了
 
 			FD_SET(connfd,&allset);
 
 			if(connfd>maxfd)
 				maxfd=connfd;
 
-			if(!--nready)
+			if(nready==1)		//只有listenfd
 				continue;
 		}
 
 		for(i=listenfd+1;i<=maxfd;++i){
 			if(FD_ISSET(i,&rset)){
-				if((n=Read(i,buf,sizeof(buf)))==0){
+				if((n=Read(i,buf,sizeof(buf)))==0){		//客户端关闭连接
 					close(i);
 					FD_CLR(i,&allset);
 				}else if(n>0){
