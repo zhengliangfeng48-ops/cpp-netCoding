@@ -1,6 +1,19 @@
-#include "wrap.h"
+#include<stdio.h>
+#include<stdbool.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<string.h>
+#include<strings.h>
+#include<unistd.h>
+#include<pthread.h>
+#include<errno.h>
+#include<sys/socket.h>
+#include<arpa/inet.h>
+#include<sys/wait.h>
+#include<signal.h>
 #include<sys/epoll.h>
 #include<fcntl.h>
+#include<time.h>
 
 #define MAX_EVENTS 1024
 #define SERV_PORT 8000
@@ -106,6 +119,17 @@ void initlistensocket(int efd,short port){
 	eventadd(efd,EPOLLIN,&g_events[MAX_EVENTS]);
 }
 
+void eventdel(int efd,struct myevent_s *ev){
+	struct epoll_event epv={0,{0}};
+
+	if(ev->status!=1)
+		return;
+
+	epv.data.ptr=NULL;
+	ev->status=0;
+	epoll_ctl(efd,EPOLL_CTL_DEL,ev->fd,&epv);
+}
+
 int main(int argc,char *argv[]){
 	unsigned short port=SERV_PORT;
 
@@ -113,8 +137,10 @@ int main(int argc,char *argv[]){
 		port=atoi(argv[1]);
 
 	g_efd=epoll_create(MAX_EVENTS+1);
-	if(g_efd<=0)
-		perr_exit("epoll_create error");
+	if(g_efd<=0){
+		perror("epoll_create error");
+		exit(1);
+	}
 
 	initlistensocket(g_efd,port);
 
@@ -126,7 +152,17 @@ int main(int argc,char *argv[]){
 		//超时验证
 		long now=time(NULL);
 		for(i=0;i<100;++i,++checkpos){
-			
+			if(checkpos==MAX_EVENTS)
+				checkpos=0;
+			if(g_events[checkpos].status!=1)
+				continue;
+
+			long duration=now-g_events[checkpos].last_active;
+			if(duration>=60){
+				close(g_events[checkpos].fd);
+				printf("[fd=%d] timeout\n",g_events[checkpos].fd);
+				eventdel(g_efd,&g_events[checkpos]);
+			}
 		}
 
 		int nfd=epoll_wait(g_efd,events,MAX_EVENTS+1,1000);
@@ -146,17 +182,6 @@ int main(int argc,char *argv[]){
 			}
 		}
 	}
-}
-
-void eventdel(int efd,struct myevent_s *ev){
-	struct epoll_event epv={0,{0}};
-
-	if(ev->status!=1)
-		return;
-
-	epv.data.ptr=NULL;
-	ev->status=0;
-	epoll_ctl(efd,EPOLL_CTL_DEL,ev->fd,&epv);
 }
 
 void recvdata(int fd,int events,void *arg){
