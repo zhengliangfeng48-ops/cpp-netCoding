@@ -1,16 +1,4 @@
-#include<stdio.h>
-#include<stdbool.h>
-#include<stdlib.h>
-#include<ctype.h>
-#include<string.h>
-#include<strings.h>
-#include<unistd.h>
-#include<pthread.h>
-#include<errno.h>
-#include<sys/socket.h>
-#include<arpa/inet.h>
-#include<sys/wait.h>
-#include<signal.h>
+#include "wrap.h"
 #include<sys/epoll.h>
 #include<fcntl.h>
 #include<time.h>
@@ -37,14 +25,16 @@ int g_efd;									//保存epoll_create返回的fd
 struct myevent_s g_events[MAX_EVENTS+1];	
 
 //初始化
-void eventset(struct myevent_s *ev,int fd,void (*call_back)(int,int,void*),void* arg){
+void eventset(struct myevent_s *ev,int fd,void (*call_back)(int,int,void*),void* arg,bool cleanBuf){
 	ev->fd=fd;
 	ev->call_back=call_back;
 	ev->events=0;
 	ev->arg=arg;
 	ev->status=0;
-	memset(ev->buf,0,sizeof(ev->buf));
-	ev->len=0;
+	if(cleanBuf){
+		memset(ev->buf,0,sizeof(ev->buf));
+		ev->len=0;
+	}
 	ev->last_active=time(NULL);
 }
 
@@ -58,7 +48,7 @@ void eventadd(int efd,int events,struct myevent_s *ev){
 		op=EPOLL_CTL_ADD;
 		ev->status=1;
 	}
-	
+
 	if(epoll_ctl(efd,op,ev->fd,&epv)<0)
 		printf("event add failed [fd=%d], events[%d]\n",ev->fd,events);
 	else
@@ -95,7 +85,7 @@ void acceptconn(int lfd,int events,void *arg){
 		}
 
 		//给cfd设置一个myevent_s结构体，回调函数设置为recvdata
-		eventset(&g_events[i],cfd,recvdata,&g_events[i]);
+		eventset(&g_events[i],cfd,recvdata,&g_events[i],true);
 		eventadd(g_efd,EPOLLIN,&g_events[i]);
 	}while(false);
 }
@@ -114,7 +104,7 @@ void initlistensocket(int efd,short port){
 
 	listen(lfd,20);
 
-	eventset(&g_events[MAX_EVENTS],lfd,acceptconn,&g_events[MAX_EVENTS]);
+	eventset(&g_events[MAX_EVENTS],lfd,acceptconn,&g_events[MAX_EVENTS],true);
 
 	eventadd(efd,EPOLLIN,&g_events[MAX_EVENTS]);
 }
@@ -195,7 +185,7 @@ void recvdata(int fd,int events,void *arg){
 		ev->buf[len]='\0';
 		printf("C[%d]:%s\n",fd,ev->buf);
 
-		eventset(ev,fd,senddata,ev);
+		eventset(ev,fd,senddata,ev,false);
 		eventadd(g_efd,EPOLLOUT,ev);
 	}else if(len==0){
 		close(ev->fd);
@@ -214,7 +204,7 @@ void senddata(int fd,int events,void *arg){
 
 	if(len>0){
 		printf("send[fd=%d], [%d]%s\n",fd,len,ev->buf);
-		eventset(ev,fd,recvdata,ev);
+		eventset(ev,fd,recvdata,ev,false);
 		eventadd(g_efd,EPOLLIN,ev);
 	}else{
 		close(ev->fd);
