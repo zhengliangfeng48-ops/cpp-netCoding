@@ -1,25 +1,11 @@
-#include<stdlib.h>
-#include<pthread.h>
-#include<unistd.h>
-#include<stdio.h>
-#include<string.h>
-#include<signal.h>
-#include<errno.h>
-#include<assert.h>
 #include "threadpool.h"
 
-#define DEFAULT_TIME 10
-#define MIN_WAIT_TASK_NUM 10
-#define DEFAULT_THREAD_VARY 10
-#define true 1
-#define false 0
-
-typedef struct{
+struct threadpool_task_t{
     void *(*function)(void *);
     void *arg;
-} threadpool_task_t;
+};
 
-typedef struct threadpool_t{
+struct threadpool_t{
     pthread_mutex_t lock;               //锁住本结构体
     pthread_mutex_t thread_counter;     //记录忙状态线程个数的锁
 
@@ -42,7 +28,7 @@ typedef struct threadpool_t{
     int queue_max_size;                 //队列可容纳任务数上限
 
     int shutdown;                       //标志位，线程池使用状态，true / false
-} threadpool_t;
+};
 
 threadpool_t* threadpool_create(int min_thr_num,int max_thr_num,int queue_max_size){
     int i;
@@ -211,10 +197,11 @@ void *adjust_thread(void* threadpool){
             }
         }
     }
+    return NULL;
 }
 
 //模拟产生任务
-int threadpoll_add(threadpool_t *pool,void* (*function)(void *arg),void *arg){
+int threadpool_add(threadpool_t *pool,void* (*function)(void *arg),void *arg){
     pthread_mutex_lock(&(pool->lock));
 
     //队满阻塞
@@ -241,13 +228,17 @@ int threadpoll_add(threadpool_t *pool,void* (*function)(void *arg),void *arg){
     //唤醒等待处理任务的线程
     pthread_cond_signal(&(pool->queue_not_empty));
     pthread_mutex_unlock(&(pool->lock));
+
+    return 0;
 }
 
 //任务函数
 void *process(void* arg){
-    printf("thread 0x%x working on task %d\n",(unsigned int)pthread_self(),(int)arg);
+    printf("thread 0x%x working on task %d\n",(unsigned int)pthread_self(),*(int*)arg);
     sleep(1);
-    printf("task %d is end\n",(int)arg);
+    printf("task %d is end\n",*(int*)arg);
+
+    return NULL;
 }
 
 int threadpool_destory(threadpool_t *pool){
@@ -291,6 +282,10 @@ int threadpool_free(threadpool_t *pool){
     pool=NULL;
 
     return 0;
+}
+
+bool is_thread_alive(pthread_t tid){
+    return true;
 }
 
 int main(){
