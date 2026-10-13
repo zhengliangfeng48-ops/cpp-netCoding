@@ -285,7 +285,17 @@ int threadpool_free(threadpool_t *pool){
 }
 
 bool is_thread_alive(pthread_t tid){
-    return true;
+    if(tid == 0){
+        return false;
+    }
+
+    int result = pthread_kill(tid, 0);
+
+    if(result == 0 || result == EPERM){
+        return true;
+    }
+
+    return false;
 }
 
 int main(){
