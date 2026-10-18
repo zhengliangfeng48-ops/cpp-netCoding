@@ -1,3 +1,0 @@
-/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles/app.dir
-/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles/edit_cache.dir
-/home/zlf/coding/cpp-netCoding/cmake-test/v1/build/CMakeFiles/rebuild_cache.dir
